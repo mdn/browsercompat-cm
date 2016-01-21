@@ -1,7 +1,7 @@
 {
-  "name": "browsercompat-cm-ui",
+  "name": "Browser Compat Contribution and Moderation UI",
   "version": "0.0.0",
-  "description": "Small description for browsercompat-cm-ui goes here",
+  "description": "A browser based user interface for interacting with the Browser Compat API.",
   "private": true,
   "directories": {
     "doc": "doc",

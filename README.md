@@ -1,7 +1,6 @@
-# Browsercompat-cm-ui
+# Browser Compat Contribution and Moderation UI
 
-This README outlines the details of collaborating on this Ember application.
-A short introduction of this app could easily go here.
+A browser based user interface for interacting with the Browser Compat API.
 
 ## Prerequisites
 
