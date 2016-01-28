@@ -2,7 +2,7 @@
 
 module.exports = function(environment) {
   var ENV = {
-    modulePrefix: 'browsercompat-cm-ui',
+    modulePrefix: 'browsercompat-cm',
     environment: environment,
     baseURL: '/',
     locationType: 'auto',
