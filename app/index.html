@@ -17,8 +17,11 @@
   <body>
     {{content-for 'body'}}
 
+    <div id="loading" aria-role="status" aria-live="polite">Loading.</div>
+
     <script src="assets/vendor.js"></script>
     <script src="assets/browsercompat-cm.js"></script>
+    <script src="assets/scripts.js"></script>
 
     {{content-for 'body-footer'}}
   </body>

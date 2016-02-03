@@ -1,0 +1,33 @@
+$form-spacing = 10px;
+
+.form {
+  border: 1px solid #000;
+
+  label {
+    font-weight: bold;
+  }
+}
+
+.form-row {
+  margin-bottom: $form-spacing;
+  margin-left: $spacing + $form-spacing;
+
+  &:first-child {
+    margin-top: $spacing;
+  }
+
+  label {
+    display: block;
+    margin-left: $form-spacing * -1;
+  }
+}
+
+.form-col {
+  display: inline-block;
+  margin-right: $spacing + $form-spacing;
+  margin-bottom: $form-spacing;
+}
+
+.form-actions {
+  margin: $spacing;
+}

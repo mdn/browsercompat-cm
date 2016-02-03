@@ -1,0 +1,24 @@
+<div class="panel">
+  <h1>{{model.name.en}}</h1>
+    <dl class="list-short">
+      <dt>Slug</dt>
+        <dd>{{model.slug}}</dd>
+      <dt>Note</dt>
+        <dd>{{model.note}}</dd>
+    </dl>
+    <div class="panel-actions">
+      <button {{action "editBrowser"}}>Edit</button>
+    </div>
+
+    {{!browsers/browser-form browser=model}}
+</div>
+
+<h1>Versions</h1>
+
+{{#each model.versionsReversed as |version|}}
+  {{browsers/version-details version=version}}
+{{/each}}
+
+<h1>New Version</h1>
+
+{{browsers/version-form}}
