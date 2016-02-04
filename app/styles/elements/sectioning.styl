@@ -1,0 +1,26 @@
+/*
+Sectioning elements - things that contribute to document outline
+    section, article, aside, header, footer, main (main is not actually sectioning,
+    did you know that?), hr (hr is sectioning in HTML5, did you know that?)
+====================================================================== */
+
+article,
+aside,
+details,
+footer,
+header,
+main,
+menu,
+nav,
+section,
+summary {
+  /* normalize */
+  display: block;
+}
+
+hr {
+  /* normalize */
+  box-sizing: content-box;
+  height: 0;
+  overflow: visible;
+}

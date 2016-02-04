@@ -1,0 +1,15 @@
+<h1>Browsers</h1>
+
+<ul>
+{{#each model as |browser|}}
+  <li>
+  {{#link-to 'browsers.browser' browser class="list-group-item"}}
+    {{browser.name.en}}
+  {{/link-to}}
+  </li>
+{{/each}}
+</ul>
+
+<h1>New Browser</h1>
+
+{{browsers/browser-form}}

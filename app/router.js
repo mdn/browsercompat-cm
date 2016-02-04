@@ -6,6 +6,9 @@ const Router = Ember.Router.extend({
 });
 
 Router.map(function() {
+  this.route('browsers', function() {
+    this.route('browser', {path: ':browser_id'});
+  });
 });
 
 export default Router;
