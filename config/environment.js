@@ -19,6 +19,15 @@ module.exports = function(environment) {
     },
     contentSecurityPolicy: {
         'connect-src': "'self' bcnext.herokuapp.com",
+    },
+    torii: {
+        providers: {
+            'bcnext': {
+                apiKey: 'YourClientIdHere',
+                scope: 'read write',
+                redirectUri: 'http://localhost:4200'
+            }
+        }
     }
   };
 

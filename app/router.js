@@ -9,6 +9,7 @@ Router.map(function() {
   this.route('browsers', function() {
     this.route('browser', {path: ':browser_id'});
   });
+  this.authenticatedRoute('protected');
 });
 
 export default Router;
