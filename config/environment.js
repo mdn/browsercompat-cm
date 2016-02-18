@@ -21,13 +21,11 @@ module.exports = function(environment) {
         'connect-src': "'self' bcnext.herokuapp.com",
     },
     torii: {
-        providers: {
-            'bcnext': {
-                apiKey: 'YourClientIdHere',
-                scope: 'read write',
-                redirectUri: 'http://localhost:4200'
-            }
-        }
+      'bcnext': {
+        apiKey: 'BCNEXT_KEY',
+        scope: 'read write',
+        redirectUri: 'http://localhost:4200'
+      }
     }
   };
 

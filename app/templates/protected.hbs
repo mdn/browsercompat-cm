@@ -1,8 +1,5 @@
-{{! app/templates/protected.hbs }}
 {{#if hasAuth}}
-  <strong>Authenticated</strong>
+  <button {{action 'signOut'}}>Sign out</button>
 {{else}}
-  <a href="#" {{action 'signIn'}}>
-    Sign in
-  </a>
+  <button {{action 'signIn'}}>Sign in</button>
 {{/if}}
