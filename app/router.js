@@ -7,7 +7,9 @@ const Router = Ember.Router.extend({
 
 Router.map(function() {
   this.route('browsers', function() {
-    this.route('browser', {path: ':browser_id'});
+    this.route('browser', {path: ':browser_id'}, function() {
+      this.route('versions');
+    });
   });
   this.authenticatedRoute('protected');
 });

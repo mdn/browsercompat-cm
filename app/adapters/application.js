@@ -1,6 +1,7 @@
 import DS from 'ember-data';
+import ENV from '../config/environment';
 
 export default DS.JSONAPIAdapter.extend({
-  host: 'https://bcnext.herokuapp.com',
-  namespace: 'api/v2'
+  host: ENV.apiHost,
+  namespace: ENV.apiNameSpace
 });

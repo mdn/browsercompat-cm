@@ -1,48 +1,49 @@
-<form class="form">
-  <div class="form-row">
-    <label for="version_version">Version</label>
-    {{input type="text" id="version_version" value=version.version}}
-  </div>
+<div class="form-row form-row-heading">
+  <label>Version</label>
+  {{input type="text" value=version.version disabled=isDisplay}}
+</div>
 
-  <div class="form-row">
-    <label for="version_slug">Slug</label>
-    {{input type="text" id="version_slug" value=version.slug}}
-  </div>
+<div class="form-row">
+  <label>Status</label>
+  <select disabled=isDisplay>
+    <option>unknown</option>
+    <option>beta</option>
+    <option>current</option>
+    <option>future</option>
+    <option>retired-beta</option>
+    <option>retired</option>
+  </select>
+</div>
 
-  <div class="form-row">
-    <label for="version_status">Status</label>
-    <select id="version_status">
-      <option>unknown</option>
-      <option>beta</option>
-      <option>current</option>
-      <option>future</option>
-      <option>retired-beta</option>
-      <option>retired</option>
-    </select>
+<div class="form-row">
+  <div class="form-col">
+    <label>Release Day</label>
+    {{input type="text"value=version.release_day disabled=isDisplay}}
   </div>
+  <div class="form-col">
+    <label>Retirement Day</label>
+    {{input type="text" value=version.retirement_day disabled=isDisplay}}
+  </div>
+</div>
 
-  <div class="form-row">
-    <div class="form-col">
-      <label for="version_release_day">Release Day</label>
-      {{input type="text" id="version_release_day" value=version.release_day}}
-    </div>
-    <div class="form-col">
-      <label for="version_retirement_day">Retirement Day</label>
-      {{input type="text" id="version_retirement_day" value=version.retirement_day}}
-    </div>
-  </div>
+<div class="form-row">
+  <label>Note</label>
+  {{input type="text" value=version.note.en disabled=isDisplay}}
+</div>
 
-  <div class="form-row">
-    <label for="version_note">Note</label>
-    {{input type="text" id="version_note" value=version.note.en}}
-  </div>
+<div class="form-row">
+  <label>Notes URI</label>
+  {{input type="text" value=version.release_notes_uri disabled=isDisplay}}
+</div>
 
-  <div class="form-row">
-    <label for="version_release_notes_uri">Notes URI</label>
-    {{input type="text" id="version_release_notes_uri" value=version.release_notes_uri}}
-  </div>
+<div class="form-actions form-actions-primary {{if isDisplay 'hidden'}}">
+  <button type="submit" {{action "saveVersion"}}>Save</button>
+</div>
 
-  <div class="form-actions">
-    <button {{action "saveBrowser"}}>Save</button>
-  </div>
-</form>
+<div class="form-actions form-actions-secondary">
+  {{#if isDisplay}}
+    <button type="button" {{action "editVersion"}}>Edit</button>
+  {{else}}
+    <button type="button" {{action "cancelVersion"}}>Cancel</button>
+  {{/if}}
+</div>

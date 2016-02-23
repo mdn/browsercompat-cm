@@ -1,0 +1,9 @@
+<h1>Versions</h1>
+
+{{#each model.versionsReversed as |version|}}
+  {{browsers/version-form
+    version=version
+    saveVersion=(action "saveVersion" version)}}
+{{else}}
+  No versions found.
+{{/each}}

@@ -1,10 +1,14 @@
 import Ember from 'ember';
-import Browser from '../../models/browser';
-import Version from '../../models/version';
 
 export default Ember.Route.extend({
   model: function(params) {
-    var browsers = this.modelFor('browsers');
-    return browsers.findBy('id', params.browser_id);
+    return this.store.findRecord('browser', params.browser_id);
+  },
+  actions: {
+    didTransition: function() {
+      // update document title
+      var browser = this.modelFor('browsers.browser');
+      document.title = `${browser.get('name.en')}`;
+    }
   }
 });

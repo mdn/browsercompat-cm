@@ -1,0 +1,86 @@
+.spinner {
+  position:absolute;
+  top: 50%;
+  left: 50%;
+  height: 0px;
+  width: 0px;
+}
+
+.spinner span {
+  position: absolute;
+  top: -20px;
+  left: -3px;
+  display: block;
+  height: 5px;
+  width: 5px;
+  border-radius: 100%;
+
+  transform: rotate(45deg);
+  transform-origin: 50% 300%;
+
+  animation-name: chaos;
+  animation-duration: 1s;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+  animation-fill-mode:backwards;
+}
+
+.spinner span:nth-of-type(1) {
+  background-color: #76b900;
+  transform: rotate(0deg);
+  animation-delay: -1000ms;
+}
+
+.spinner span:nth-of-type(2) {
+  background-color: #005bc4;
+  transform: rotate(45deg);
+  animation-delay: -750ms;
+}
+.spinner span:nth-of-type(3) {
+  background-color: #f17c0e;
+  transform: rotate(90deg);
+  animation-delay: -500ms;
+}
+
+.spinner span:nth-of-type(4) {
+  background-color: #d32939;
+  transform: rotate(135deg);
+  animation-delay: -250ms;
+}
+
+.spinner span:nth-of-type(5) {
+  background-color: #577633;
+  transform: rotate(180deg);
+  animation-delay: 0s;
+}
+
+.spinner span:nth-of-type(6) {
+  background-color: #003c79;
+  transform: rotate(225deg);
+  animation-delay: 250ms;
+}
+
+.spinner span:nth-of-type(7) {
+   background-color: #432c5f;
+  transform: rotate(270deg);
+  animation-delay: 500ms;
+}
+
+.spinner span:nth-of-type(8) {
+  background-color: #950000;
+  transform: rotate(315deg);
+  animation-delay: 750ms;
+}
+
+@keyframes chaos {
+  0% {
+    opacity: 1;
+  }
+  60% {
+    opacity: 1;
+  }
+  100% {
+    transform: scale(3.0);
+    opacity: 0;
+  }
+}
