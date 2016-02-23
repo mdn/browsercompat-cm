@@ -6,7 +6,7 @@ export default DS.Model.extend({
   note: DS.attr(),
   versions: DS.hasMany('versions', {async: true}),
   // computed
-  versionsReversed: function(){
+  versionsReversed: function() {
     return this.get('versions').toArray().reverse();
   }.property('versions.[]'),
 });

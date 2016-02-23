@@ -6,6 +6,8 @@ module.exports = function(environment) {
     environment: environment,
     baseURL: '/',
     locationType: 'auto',
+    apiHost: 'https://bcnext.herokuapp.com',
+    apiNameSpace: 'api/v2',
     EmberENV: {
       FEATURES: {
         // Here you can enable experimental features on an ember canary build
@@ -21,10 +23,12 @@ module.exports = function(environment) {
         'connect-src': "'self' bcnext.herokuapp.com",
     },
     torii: {
-      'bcnext': {
-        apiKey: 'BCNEXT_KEY',
-        scope: 'read write',
-        redirectUri: 'http://localhost:4200'
+      providers: {
+        'bcnext': {
+          apiKey: 'BC_API_KEY',
+          scope: 'read write',
+          redirectUri: 'https://localhost:4200'
+        }
       }
     }
   };

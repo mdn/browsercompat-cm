@@ -10,7 +10,8 @@ export default DS.Model.extend({
   release_notes_uri: DS.attr(),
   note: DS.attr(),
   order: DS.attr('number'),
-  supports: DS.hasMany('supports', {async: true}),
+  supports: DS.attr(),
+  //supports: DS.hasMany('supports', {async: true}),
   //computed
   isFuture: Ember.computed.equal('status', 'future'),
   isBeta: Ember.computed.equal('status', 'beta'),

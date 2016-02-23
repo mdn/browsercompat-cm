@@ -1,10 +1,17 @@
 $form-spacing = 10px;
 
 .form {
+  position: relative;
+  margin-bottom: $spacing;
+  padding-bottom: $spacing;
   border: 1px solid #000;
 
   label {
     font-weight: bold;
+  }
+
+  input {
+    max-width: 100%;
   }
 }
 
@@ -16,9 +23,31 @@ $form-spacing = 10px;
     margin-top: $spacing;
   }
 
+  &:last-child {
+    margin-bottom: 0;
+  }
+
   label {
     display: block;
     margin-left: $form-spacing * -1;
+
+    .is-display & {
+      display: inline-block;
+    }
+  }
+}
+
+.form-row-heading {
+
+  .is-display & {
+    label {
+      display: none;
+    }
+    input {
+      margin-left: $form-spacing * -1;
+      font-size: $font-heading;
+      font-weight: normal;
+    }
   }
 }
 
@@ -30,4 +59,23 @@ $form-spacing = 10px;
 
 .form-actions {
   margin: $spacing;
+}
+
+.form-actions-primary {
+
+}
+
+.form-actions-secondary {
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+
+.is-display {
+  [disabled] {
+    border: 1px solid transparent;
+    padding: 0;
+    background-color: #fff;
+    color: #000;
+  }
 }

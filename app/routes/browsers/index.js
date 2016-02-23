@@ -1,6 +1,4 @@
 import Ember from 'ember';
-import Browser from '../models/browser';
-import Version from '../models/version';
 
 export default Ember.Route.extend({
   model: function() {
@@ -9,7 +7,8 @@ export default Ember.Route.extend({
   actions: {
     didTransition: function() {
       // update document title
-      document.title = 'Browsers';
+      var browser = this.modelFor('browsers.browser');
+      document.title = "Browsers";
     },
-  },
+  }
 });

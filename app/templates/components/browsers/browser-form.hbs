@@ -1,20 +1,26 @@
-<form class="form">
-  <div class="form-row">
-    <label for="Name">Name</label>
-    {{input type="text" id="name" value=browser.name.en}}
-  </div>
+<div class="form-row form-row-heading">
+  <label for="Name">Name</label>
+  {{input type="text" id="name" value=browser.name.en disabled=isDisplay}}
+</div>
 
-  <div class="form-row">
-    <label for="Slug">Slug</label>
-    {{input type="text" id="slug" value=browser.slug}}
-  </div>
+<div class="form-row">
+  <label for="Slug">Slug</label>
+  {{input type="text" id="slug" value=browser.slug disabled=isDisplay}}
+</div>
 
-  <div class="form-row">
-    <label for="note">Note</label>
-    {{input type="text" id="note" value=browser.note.en}}
-  </div>
+<div class="form-row">
+  <label for="note">Note</label>
+  {{input type="text" id="note" value=browser.note.en disabled=isDisplay}}
+</div>
 
-  <div class="form-actions">
-    <button {{action "saveBrowser"}}>Save</button>
-  </div>
-</form>
+<div class="form-actions form-actions-primary {{if isDisplay 'hidden'}}">
+  <button type="submit" {{action "saveBrowser"}}>Save</button>
+</div>
+
+<div class="form-actions form-actions-secondary">
+  {{#if isDisplay}}
+    <button type="button" {{action "editBrowser"}}>Edit</button>
+  {{else}}
+    <button type="button" {{action "cancelBrowser"}}>Cancel</button>
+  {{/if}}
+</div>
