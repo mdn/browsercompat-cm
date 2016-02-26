@@ -10,5 +10,13 @@ export default Ember.Controller.extend({
       // go to new page
       this.transitionToRoute('browsers.browser', browser);
     },
+    cancelBrowser: function(params) {
+      console.log('Attempt to delete new browser');
+      var browser = params;
+      browser.destroyRecord();
+
+      // go to new page
+      this.transitionToRoute('browsers');
+    },
   }
 });

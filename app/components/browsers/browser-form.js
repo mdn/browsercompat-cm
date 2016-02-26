@@ -16,7 +16,7 @@ export default Ember.Component.extend({
     cancelBrowser: function() {
       console.log('cancelBrowser');
       // TODO: set form fields back to model
-      this.set('isEditing', false);
+      this.get('cancelBrowser')();
     },
     saveBrowser: function() {
       console.log('saveBrowser triggered');
