@@ -10,9 +10,5 @@
 {{/each}}
 </ul>
 
+{{#link-to 'browsers.new'}}Add browser{{/link-to}}
 
-<h1>New Browser</h1>
-
-{{browsers/browser-form
-  browser=model
-  saveBrowser=(action "addBrowser" model)}}

@@ -3,9 +3,10 @@ import Ember from 'ember';
 export default Ember.Component.extend({
   tagName: 'form',
   classNames: ['form'],
-  classNameBindings: ['isEditing', 'isDisplay'],
+  classNameBindings: ['isEditing', 'isDisplay', 'isNew'],
 
-  isEditing: false,
+  isNew: false,
+  isEditing: Ember.computed.alias('isNew'),
   isDisplay: Ember.computed.not('isEditing'),
   actions: {
     editBrowser: function() {

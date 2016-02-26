@@ -21,6 +21,9 @@
   {{#if isDisplay}}
     <button type="button" {{action "editBrowser"}}>Edit</button>
   {{else}}
+    {{#unless isNew}}
     <button type="button" {{action "cancelBrowser"}}>Cancel</button>
+    }
+    {{/unless}}
   {{/if}}
 </div>

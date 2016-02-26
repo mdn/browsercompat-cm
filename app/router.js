@@ -10,6 +10,7 @@ Router.map(function() {
     this.route('browser', {path: ':browser_id'}, function() {
       this.route('versions');
     });
+    this.route('new');
   });
   this.authenticatedRoute('protected');
 });
