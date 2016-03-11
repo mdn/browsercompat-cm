@@ -11,8 +11,12 @@
 </ul>
 
 
+{{#if session.isAuthenticated}}
+
 <h1>New Browser</h1>
 
 {{browsers/browser-form
   browser=model
   saveBrowser=(action "addBrowser" model)}}
+
+{{/if}}

@@ -2,6 +2,17 @@
   <nav class="nav-main">
     <ul>
       <li>{{#link-to 'browsers'}}Browsers{{/link-to}}</li>
+      <li>
+        {{#if session.isAuthenticated}}
+          Signed in as {{session.username}}. <button {{action 'signout'}}>Sign out</button>
+        {{else}}
+          {{#if session.isWorking}}
+            Signing in...
+          {{else}}
+            <button {{action 'signin'}}>Sign in</button>
+          {{/if}}
+        {{/if}}
+      </li>
     </ul>
   </nav>
 </header>

@@ -4,8 +4,13 @@
 
 {{outlet}}
 
+
+{{#if session.isAuthenticated}}
+
 <h1>New Version</h1>
 
 {{browsers/version-form
   version=model
   saveVersion=(action "addVersion" model)}}
+
+{{/if}}

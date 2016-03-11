@@ -1,4 +1,4 @@
-import Oauth2 from 'torii/providers/oauth2-code';
+import Oauth2 from 'torii/providers/oauth2-bearer';
 
 // extend oauth2 object to create Bcnext provider
 var Bcnext = Oauth2.extend({
