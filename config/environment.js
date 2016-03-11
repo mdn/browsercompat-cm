@@ -23,9 +23,10 @@ module.exports = function(environment) {
         'connect-src': "'self' bcnext.herokuapp.com",
     },
     torii: {
+      sessionServiceName: 'session',
       providers: {
         'bcnext': {
-          apiKey: 'BC_API_KEY',
+          apiKey: 'API_KEY',
           scope: 'read write',
           redirectUri: 'https://localhost:4200'
         }

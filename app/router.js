@@ -11,7 +11,6 @@ Router.map(function() {
       this.route('versions');
     });
   });
-  this.authenticatedRoute('protected');
 });
 
 export default Router;
