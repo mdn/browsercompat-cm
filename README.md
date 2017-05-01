@@ -2,6 +2,15 @@
 
 A browser based user interface for interacting with the Browser Compat API.
 
+## Status
+This project has been cancelled.  The have been no code changes since March
+2016. 
+
+As of 2017, these are the current MDN data projects:
+
+* https://github.com/mdn/browser-compat-data
+* https://github.com/mdn/data
+
 ## Prerequisites
 
 You will need the following things properly installed on your computer.
